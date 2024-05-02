@@ -1,4 +1,4 @@
-<p-button label="Submit"></p-button>
+<!-- <p-button label="Submit"></p-button>
 
 <p-button label="Primary"></p-button>
 <p-button label="Secondary" severity="secondary"></p-button>
@@ -8,23 +8,28 @@
 <p-button label="Help" severity="help"></p-button>
 <p-button label="Danger" severity="danger"></p-button>
 
+ -->
 
 
-<h2>formulario basico</h2>
 <div class="container">
-<form  (ngSubmit)="onSubmit()">
-<div class="p-field">
-    <label for="name">name</label>
-    <input id="name" type="text" [(ngModel)]="name" name="name" pInputText required>
-</div>
-<div class="p-field">
-    <label for="email">email</label>
-    <input id="email" type="email" [(ngModel)]="email"  name="email"   required>
-</div>
-<div class="p-field">
-    <label for="birthdate">cumple</label>
-    <p-calendar id="birthdate" [(ngModel)]="birthdate"  ></p-calendar>
-</div>
-<button type="submit" pButton pRipple class="p-button success" ></button>
-</form>
+    <header class="header">
+        <h2>formulario basico</h2>
+    </header>
+    <main class="main">
+        <form (ngSubmit)="onSubmit()">
+            <div class="p-field">
+                <label for="name">name</label>
+                <input id="name" type="text" [(ngModel)]="name" name="name" pInputText required>
+            </div>
+            <div class="p-field">
+                <label for="email">email</label>
+                <input id="email" type="email" [(ngModel)]="email" name="email" pInputText required>
+            </div>
+            <div class="p-field">
+                <label for="birthdate">cumple</label>
+                <p-calendar id="birthdate" [(ngModel)]="birthdate" name="birthdate"></p-calendar>
+            </div>
+            <button type="submit" pButton pRipple class="p-button success">enviar</button>
+        </form>
+    </main>
 </div>

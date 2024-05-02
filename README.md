@@ -1,10 +1,14 @@
 ### Creacion de un proyecto modular(que si tenga en app.module.ts)
+
 ```
 ng new nombreProyecto --standalone=false
 ```
+
 # Primeros Pasos:
+
 ## Clonacion del proyecto
-nombre del proyecto: 
+
+nombre del proyecto:
 
 ProyectoClasesFrontendCuarto
 
@@ -13,33 +17,126 @@ git clone  https://github.com/jdu-andrango/ProyectoClasesFrontendCuarto.git
 ```
 
 - una ves clonado el repositorio se procede a abrirlo en visual estudio code
-- En visual estudio code abrimos una terminal y colocamos los siguientes comandos  
+- En visual estudio code abrimos una terminal y colocamos los siguientes comandos
 
-### instalacion de modulos npm 
-los modulos de node son muy importantes de instalar al iniciar el proyecto, ya que estos 
+### instalacion de modulos npm
+
+los modulos de node son muy importantes de instalar al iniciar el proyecto, ya que estos
 no se guardan en el repositorio de github
+
 ```
 npm install
 ```
+
 ### instalacion del cdk de angular
+
 ```
 npm install @angular/cdk
 ```
+
 ### instalar la libreria primeng
-primeng es una libreria de componentes para angular 
+
+primeng es una libreria de componentes para angular
 [https://primeng.org/]
+
 ```
 npm install primeng
 ```
+
 ```
 npm install primeng primeicons
 ```
+
 ```
 npm install @angular/animations
 ```
 
+### Importacion de configuraciones de primeng
 
-# ProyectoClasesFrontendCuarto
+se debe importar PrimeNGConfig que es la coniguracion de primeng en el proyecto
+
+es importante reslatar que esta configuracion va en app.component.ts
+
+```
+import { PrimeNGConfig } from 'primeng/api';
+```
+
+el siguiente fragmento de codigo es para la configuracion solo de prime ng y lo agregaremos a nuestro app.component.ts
+
+```
+import { Component, OnInit } from '@angular/core';
+import { PrimeNGConfig } from 'primeng/api';
+
+@Component({
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.css'
+})
+export class AppComponent implements OnInit {
+
+    constructor(private primengConfig: PrimeNGConfig) {}
+
+    ngOnInit() {
+        this.primengConfig.ripple = true;
+    }
+}
+```
+
+### Colocar los modulos recomendadas para el css de primeng en el archivo angular.json
+
+se debe buscar la dependencia styles que se encuentra asi en el archivo angular.json
+
+```
+"styles": [
+              "src/styles.css"
+            ],
+```
+
+ahora le agregamos las dependencias de primeng
+
+```
+ "node_modules/primeng/resources/themes/lara-light-blue/theme.css",
+ "node_modules/primeng/resources/primeng.min.css"
+```
+
+El resultado quedaria asi:
+
+```
+"styles": [
+              "src/styles.css",
+              "node_modules/primeng/resources/themes/lara-light-blue/theme.css",
+              "node_modules/primeng/resources/primeng.min.css"
+            ],
+```
+
+ahora agregamos las importaciones de primeng en el archivo styles.css
+
+```
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+```
+
+Ahora ya tenemos instalado y configurado primeng
+
+### implementar componentes de primeng ejemplo button
+
+importamos el modulo de button en nuestro archivo de app.modulo.ts
+
+```
+import { ButtonModule } from 'primeng/button';
+```
+
+una ves importado se debe agregar el modulo colocando una coma y a continuacion ButtonModule todo esto en el app.module.ts
+
+```
+imports: [
+    BrowserModule,
+    AppRoutingModule,
+    ButtonModule
+  ],
+```
+
+ProyectoClasesFrontendCuarto
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.6.
 
