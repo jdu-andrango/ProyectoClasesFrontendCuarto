@@ -12,6 +12,7 @@ export class AppComponent implements OnInit {
   name: string = '';
   email: string = '';
   birthdate: Date | "";
+ errormess: Message[]=[];
 
   constructor(private primengConfig: PrimeNGConfig, private messageService: MessageService) {
     this.name = '';
@@ -34,6 +35,7 @@ export class AppComponent implements OnInit {
       summary: 'Bien',
       detail: 'nombre: ' + this.name + '   ' + 'email: ' + this.email + '   ' + this.birthdate
     });
+   
     //imprimir en consola los datos
     console.log('formulario enviado'),
     console.log('nombre', this.name),
@@ -46,20 +48,31 @@ export class AppComponent implements OnInit {
   }
 
   mensajeError(): void{
-    if (this.name.trim() === " " && this.email.trim() === " " && this.birthdate === "")
+    if (this.name.trim() === " " || this.email.trim() === " " || !this.birthdate )
     {
       this.messageService.add({
         severity: 'error',
         summary: 'error',
-        detail: 'nombre: ' + this.name + '   ' + 'email: ' + this.email + '   ' + this.birthdate
+        detail: 'nombre: Datos Incompletos ' + this.name + '   ' + 'email: Datos Incompletos ' + this.email + '   ' + this.birthdate
       });
-      console.log('error')
-    } else {
+      console.log('datos incompletos')
       
+    } else {
+      this.errormess=[
+        {
+          severity: 'success',
+          summary: 'exito',
+          detail: 'nombre: ' + this.name + '   ' + 'email: ' + this.email + '   ' + this.birthdate
+        }
+      ]
     console.log('formulario enviado'),
     console.log('nombre', this.name),
     console.log('email', this.email),
     console.log('cumples', this.birthdate)
+    console.log('Bien')
+    this.name = '';
+    this.email = '';
+    this.birthdate = "";
     }
     
   }

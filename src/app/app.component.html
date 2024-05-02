@@ -20,10 +20,11 @@
         </form>
     </main>
     <footer class="footer">
-        <button type="submit" [text]="true" [raised]="true"  pButton pRipple (click)="addMessages()" class="p-button success" label="enviar" class="mr-2"></button>
-        <!-- <p-messages></p-messages> -->
+        <!-- <button type="submit" [text]="true" [raised]="true"  pButton pRipple (click)="addMessages()" class="p-button success" label="enviar" class="mr-2"></button> -->
+        
+        <button type="submit" [text]="true" [raised]="true"  pButton pRipple (click)="mensajeError()" class="p-button success" label="enviar" class="mr-2"></button>
     </footer>
-    <!-- <button type="submit" [text]="true" [raised]="true"  pButton pRipple (click)="mensajeError()" class="p-button success" label="enviar" class="mr-2"></button> -->
 
     <p-messages></p-messages>
+    <p-messages [(value)]="errormess" [enableService]="false" [closable]="false"  ></p-messages>
 </div>
