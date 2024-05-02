@@ -1,31 +1,67 @@
 import { Component, OnInit } from '@angular/core';
-import { PrimeNGConfig } from 'primeng/api';
-
+import { MessageService, PrimeNGConfig } from 'primeng/api';
+import { Message } from 'primeng/api';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
+  providers: [MessageService]
 })
 export class AppComponent implements OnInit {
   title = 'jonathanTest';
   name: string = '';
   email: string = '';
-  birthdate: Date = new Date;
+  birthdate: Date | "";
 
-  constructor(private primengConfig: PrimeNGConfig) {
+  constructor(private primengConfig: PrimeNGConfig, private messageService: MessageService) {
     this.name = '';
     this.email = '';
-    this.birthdate = new Date;
+    this.birthdate = "";
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.primengConfig.ripple = true;
   }
   onSubmit() {
     console.log('form submited'),
-      console.log('name', this.name),
-      console.log('email', this.email),
-      console.log('byrthdate', this.birthdate)
+    console.log('name', this.name),
+    console.log('email', this.email),
+    console.log('byrthdate', this.birthdate)
+  }
+  addMessages(): void {
+    this.messageService.add({
+      severity: 'success',
+      summary: 'Bien',
+      detail: 'nombre: ' + this.name + '   ' + 'email: ' + this.email + '   ' + this.birthdate
+    });
+    //imprimir en consola los datos
+    console.log('formulario enviado'),
+    console.log('nombre', this.name),
+    console.log('email', this.email),
+    console.log('cumples', this.birthdate)
+    //limpiar despues de escribir los datos
+    this.name = '';
+    this.email = '';
+    this.birthdate = "";
+  }
+
+  mensajeError(): void{
+    if (this.name.trim() === " " && this.email.trim() === " " && this.birthdate === "")
+    {
+      this.messageService.add({
+        severity: 'error',
+        summary: 'error',
+        detail: 'nombre: ' + this.name + '   ' + 'email: ' + this.email + '   ' + this.birthdate
+      });
+      console.log('error')
+    } else {
+      
+    console.log('formulario enviado'),
+    console.log('nombre', this.name),
+    console.log('email', this.email),
+    console.log('cumples', this.birthdate)
+    }
+    
   }
 
 }

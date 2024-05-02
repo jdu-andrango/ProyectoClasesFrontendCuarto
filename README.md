@@ -136,6 +136,12 @@ imports: [
   ],
 ```
 
+ahora solo procedemos a utilizar el Button de primeng con la sintaxis especial de primeng para que funcione esto lo haremos en el archivo app.component.html
+
+```
+<p-button label="Submit"></p-button>
+```
+
 ProyectoClasesFrontendCuarto
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.6.

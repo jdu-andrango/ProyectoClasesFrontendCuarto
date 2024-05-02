@@ -15,6 +15,8 @@ import { CalendarModule } from 'primeng/calendar';
 import { AutoCompleteModule } from "primeng/autocomplete";
 import { InputTextModule } from "primeng/inputtext";
 import { ButtonModule } from 'primeng/button';
+import { MessageService } from 'primeng/api';
+import { MessagesModule } from 'primeng/messages';
 
 @NgModule({
   declarations: [
@@ -28,9 +30,11 @@ import { ButtonModule } from 'primeng/button';
     BrowserAnimationsModule,
     AutoCompleteModule,
     InputTextModule,
-    ButtonModule
+    ButtonModule,
+    MessagesModule
   ],
-  providers: [],
+  providers: [
+    MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

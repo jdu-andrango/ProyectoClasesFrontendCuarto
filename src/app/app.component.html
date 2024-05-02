@@ -1,16 +1,3 @@
-<!-- <p-button label="Submit"></p-button>
-
-<p-button label="Primary"></p-button>
-<p-button label="Secondary" severity="secondary"></p-button>
-<p-button label="Success" severity="success"></p-button>
-<p-button label="Info" severity="info"></p-button>
-<p-button label="Warning" severity="warning"></p-button>
-<p-button label="Help" severity="help"></p-button>
-<p-button label="Danger" severity="danger"></p-button>
-
- -->
-
-
 <div class="container">
     <header class="header">
         <h2>formulario basico</h2>
@@ -19,17 +6,24 @@
         <form (ngSubmit)="onSubmit()">
             <div class="p-field">
                 <label for="name">name</label>
-                <input id="name" type="text" [(ngModel)]="name" name="name" pInputText required>
+                <input id="name" type="text" [(ngModel)]="name" name="name" pInputText >
             </div>
             <div class="p-field">
                 <label for="email">email</label>
-                <input id="email" type="email" [(ngModel)]="email" name="email" pInputText required>
+                <input id="email" type="email" [(ngModel)]="email" name="email" pInputText >
             </div>
             <div class="p-field">
                 <label for="birthdate">cumple</label>
-                <p-calendar id="birthdate" [(ngModel)]="birthdate" name="birthdate"></p-calendar>
+                <!-- <p-calendar id="birthdate" [(ngModel)]="birthdate" name="birthdate"></p-calendar> -->
+                <p-calendar [(ngModel)]="birthdate" name="birthdate" [touchUI]="true" [readonlyInput]="true"></p-calendar>
             </div>
-            <button type="submit" pButton pRipple class="p-button success">enviar</button>
         </form>
     </main>
+    <footer class="footer">
+        <button type="submit" [text]="true" [raised]="true"  pButton pRipple (click)="addMessages()" class="p-button success" label="enviar" class="mr-2"></button>
+        <!-- <p-messages></p-messages> -->
+    </footer>
+    <!-- <button type="submit" [text]="true" [raised]="true"  pButton pRipple (click)="mensajeError()" class="p-button success" label="enviar" class="mr-2"></button> -->
+
+    <p-messages></p-messages>
 </div>
