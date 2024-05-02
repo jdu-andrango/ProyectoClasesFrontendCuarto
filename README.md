@@ -1,4 +1,45 @@
-# JonathanTest
+### Creacion de un proyecto modular(que si tenga en app.module.ts)
+```
+ng new nombreProyecto --standalone=false
+```
+# Primeros Pasos:
+## Clonacion del proyecto
+nombre del proyecto: 
+
+ProyectoClasesFrontendCuarto
+
+```
+git clone  https://github.com/jdu-andrango/ProyectoClasesFrontendCuarto.git
+```
+
+- una ves clonado el repositorio se procede a abrirlo en visual estudio code
+- En visual estudio code abrimos una terminal y colocamos los siguientes comandos  
+
+### instalacion de modulos npm 
+los modulos de node son muy importantes de instalar al iniciar el proyecto, ya que estos 
+no se guardan en el repositorio de github
+```
+npm install
+```
+### instalacion del cdk de angular
+```
+npm install @angular/cdk
+```
+### instalar la libreria primeng
+primeng es una libreria de componentes para angular 
+[https://primeng.org/]
+```
+npm install primeng
+```
+```
+npm install primeng primeicons
+```
+```
+npm install @angular/animations
+```
+
+
+# ProyectoClasesFrontendCuarto
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.6.
 
