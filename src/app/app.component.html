@@ -1,6 +1,6 @@
 <div class="container">
     <header class="header">
-        <h2>formulario basico</h2>
+        <h2>formulario basico de registro de Usuario</h2>
     </header>
     <main class="main">
         <form (ngSubmit)="onSubmit()">
@@ -9,8 +9,20 @@
                 <input id="name" type="text" [(ngModel)]="name" name="name" pInputText >
             </div>
             <div class="p-field">
+                <label for="userName">user</label>
+                <input id="userName" type="text" [(ngModel)]="userName" name="userName" pInputText >
+            </div>
+            <div class="p-field">
                 <label for="email">email</label>
                 <input id="email" type="email" [(ngModel)]="email" name="email" pInputText >
+            </div>
+            <div class="p-field">
+                <label for="password">password</label>
+                <input id="password" type="password" [(ngModel)]="password" name="password" pInputText >
+            </div>  
+            <div class="p-field">
+                <label for="telefono">telefono</label>
+                <input id="telefono"  type="telefono" [(ngModel)]="telefono" name="telefono" pInputText >
             </div>
             <div class="p-field">
                 <label for="birthdate">cumple</label>

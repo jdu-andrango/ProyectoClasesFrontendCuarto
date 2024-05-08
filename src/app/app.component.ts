@@ -12,12 +12,18 @@ export class AppComponent implements OnInit {
   name: string = '';
   email: string = '';
   birthdate: Date | "";
- errormess: Message[]=[];
+  password : string | number = "";
+  errormess: Message[]=[];
+  userName : string = "";
+  telefono : string |number = "";
+  
 
   constructor(private primengConfig: PrimeNGConfig, private messageService: MessageService) {
     this.name = '';
     this.email = '';
     this.birthdate = "";
+    this.password = "";
+    this.userName = "";
   }
 
   ngOnInit(): void {
@@ -62,17 +68,21 @@ export class AppComponent implements OnInit {
         {
           severity: 'success',
           summary: 'exito',
-          detail: 'nombre: ' + this.name + '   ' + 'email: ' + this.email + '   ' + this.birthdate
+          detail: 'nombre: ' + this.name + ' user Name '+ this.userName + '   ' + 'email: ' + this.email + ' password  ' +' telefono '+this.telefono+   this.password +' cumple  '  + this.birthdate 
         }
       ]
     console.log('formulario enviado'),
-    console.log('nombre', this.name),
-    console.log('email', this.email),
-    console.log('cumples', this.birthdate)
+    console.log('nombre  =', this.name),
+    console.log('user Name  =', this.userName)
+    console.log('email  =', this.email),
+    console.log('cumples  =', this.birthdate)
+    console.log('password  =', this.password)
     console.log('Bien')
     this.name = '';
     this.email = '';
+    this.password = "";
     this.birthdate = "";
+    this.telefono = "";
     }
     
   }
