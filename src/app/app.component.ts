@@ -17,7 +17,7 @@ export class AppComponent implements OnInit {
   userName : string = "";
   telefono : string |number = "";
   
-
+  
   constructor(private primengConfig: PrimeNGConfig, private messageService: MessageService) {
     this.name = '';
     this.email = '';
@@ -63,7 +63,7 @@ export class AppComponent implements OnInit {
       });
       console.log('datos incompletos')
       
-    } else {
+    } else {                           
       this.errormess=[
         {
           severity: 'success',
