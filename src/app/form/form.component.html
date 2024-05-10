@@ -1,5 +1,5 @@
 <!-- <p>form works!</p> -->
-<form action="">
+<!-- <form action="">
 
     <label for="name"></label>
     <input type="text" id="name" [formControl]="nameControl">
@@ -10,7 +10,7 @@
     <button type="submit" onclick="ValidarForm" (click)="validarForm()">enviar</button>
     
 </form>
-
+-->
 <!-- <form action="">
 
     <label for="name2"></label>
@@ -22,3 +22,60 @@
     <button type="submit" onclick="ValidarForm" (click)="validarForm()"></button>
     
 </form> -->
+
+<!--
+
+    <form [formGroup]="form" (ngSubmit)="validarForm()">
+        <label for="name2">NOMBRE2</label>
+        <input type="text" formControlName="name">
+        
+        <label for="age2">EDAD2</label>
+        <input type="text" formControlName="age">
+        
+        <button type="submit">enviar</button>
+    </form>
+    
+
+
+
+
+
+<form [formGroup]="form" (ngSubmit)="validarForm2()">
+    <label for="name3">NOMBRE2</label>
+    <input type="text" formControlName="name3">
+    
+    <label for="age3">EDAD2</label>
+    <input type="text" formControlName="age3">
+    
+    <button type="submit">enviar</button>
+</form>
+
+-->
+
+<form [formGroup]="form" (ngSubmit)="validarForm3()">
+    <div>
+      <label for="name">Nombre:</label>
+      <input type="text" id="name" formControlName="name">
+    </div>
+    <div>
+      <label for="age">Edad:</label>
+      <input type="number" id="age" formControlName="age">
+    </div>
+    <div>
+      <label for="password">Contraseña:</label>
+      <input type="password" id="password" formControlName="password">
+    </div>
+    <div>
+      <label for="city">Ciudad:</label>
+      <input type="text" id="city" formControlName="city">
+    </div>
+    <div>
+      <label for="codigoPostal">Código Postal:</label>
+      <input type="text"  formControlName="codigoPostal">
+    </div>
+    <button type="submit">Enviar</button>
+  </form>
+  
+
+
+
