@@ -8,8 +8,8 @@ import { Message } from 'primeng/api';
   styleUrl: './form.component.css'
 })
 export class FormComponent {
-//  protected nameControl : FormControl = new FormControl<string> ("juan "); 
-//  protected ageControl : FormControl = new FormControl<number> (0); 
+//  protected nameControl : FormControl = new FormControl<string> ("juan ");
+//  protected ageControl : FormControl = new FormControl<number> (0);
 //  protected form : FormGroup = new FormGroup(/*controls :*/{
 //   // name:"juan",
    // age: 3
@@ -43,7 +43,10 @@ private formBuilder: FormBuilder=inject(FormBuilder);
   get buildForm():FormGroup{
     return this.form = this.formBuilder.group({
       name: ['Juan', [Validators.required, Validators.minLength(2), Validators.maxLength(50)]],
-      age: [0, Validators.required]
+      age: ['', Validators.required],
+      password:['',Validators.required, Validators.minLength(2),Validators.maxLength(50)],
+      city:['',Validators.required, Validators.minLength(2),Validators.maxLength(50)],
+      codigoPostal:['',Validators.required]
     });
   }
   validarForm(): void {
@@ -66,10 +69,10 @@ private formBuilder: FormBuilder=inject(FormBuilder);
   get buildFormConstructor():FormGroup{
     return this.form = this.formBuilderConstructor.group({
       name: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(50)]],
-      age: [0, Validators.required ],
-      password:["",Validators.required, Validators.minLength(6),Validators.maxLength(50)],
-      city:["",Validators.required, Validators.minLength(8),Validators.maxLength(50)],
-      codigoPostal:["",Validators.required]
+      age: ['',[ Validators.required] ],
+      password:['',Validators.required, Validators.minLength(2),Validators.maxLength(50)],
+      city:['',Validators.required, Validators.minLength(2),Validators.maxLength(50)],
+      codigoPostal:['',Validators.required]
     });
   }
 

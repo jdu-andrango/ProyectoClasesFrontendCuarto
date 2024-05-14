@@ -18,11 +18,13 @@ import { ButtonModule } from 'primeng/button';
 import { MessageService } from 'primeng/api';
 import { MessagesModule } from 'primeng/messages';
 import { FormComponent } from './form/form.component';
+import { FormFirstComponent } from './form-first/form-first.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FormComponent
+    FormComponent,
+    FormFirstComponent
   ],
   imports: [
     BrowserModule,
