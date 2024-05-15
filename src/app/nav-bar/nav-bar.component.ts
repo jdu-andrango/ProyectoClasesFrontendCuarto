@@ -15,41 +15,67 @@ export class NavBarComponent implements OnInit {
   ngOnInit() {
       this.items = [
           {
-              label: 'selecciona',
+              label: 'home',
               icon: 'pi pi-home',
-              items: [
-                  {
-                      label: 'home',
-                      route: '/home'
-                  },
-                  {
-                      label: 'contact',
-                      route: '/contact'
-                  }
-              ]
+              route:'/home'
+              // items: [
+              //     {
+              //         label: 'home',
+              //         route: '/home'
+              //     },
+              //     {
+              //         label: 'contact',
+              //         route: '/contact'
+              //     }
+              // ]
           },
           {
-              label: 'contacto',
-              icon: 'pi pi-link',
-              command: () => {
-                  this.router.navigate(['/contact']);
-              }
-          },
-          {
-              label: 'link Externos',
-              icon: 'pi pi-home',
-              items: [
-                  {
-                      label: 'Angular',
-                      url: 'https://angular.io/'
-                  },
-                  {
-                      label: 'Vite.js',
-                      url: 'https://vitejs.dev/'
-                  }
-              ]
-          },
-          
+            label: 'Contactos',
+            icon: 'pi pi-contactos',
+            route: '/contact'
+            // items: [
+            //     {
+            //         label: 'home',
+            //         route: '/home'
+            //     },
+            //     {
+            //         label: 'contact',
+            //         route: '/contact'
+            //     }
+            // ]
+        },
+        {
+          label: 'formulario Reactivo Usuarioss',
+          icon: 'pi pi-form',
+          route:'/formReact'
+          // items: [
+          //     {
+          //         label: 'home',
+          //         route: '/home'
+          //     },
+          //     {
+          //         label: 'contact',
+          //         route: '/contact'
+          //     }
+          // ]
+      },
+      {
+        label: 'formulario',
+        icon: 'pi pi-formulario',
+        route:'/form'
+        // items: [
+        //     {
+        //         label: 'home',
+        //         route: '/home'
+        //     },
+        //     {
+        //         label: 'contact',
+        //         route: '/contact'
+        //     }
+        // ]
+    },
+
+
       ];
   }
 }

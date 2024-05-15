@@ -7,8 +7,13 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 // importaciones de Routin module o rutas
 import { AppRoutingModule } from './app-routing.module';
 
-// importaciones de los componentes 
+// importaciones de los componentes
 import { AppComponent } from './app.component';
+import { FormFirstComponent } from './form-first/form-first.component';
+import { AvatarGroupModule } from 'primeng/avatargroup';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { ContactComponent } from './contact/contact.component';
+import { HomeComponent } from './home/home.component';
 
 // importaciones de los componentes de primeng
 import { CalendarModule } from 'primeng/calendar';
@@ -20,15 +25,12 @@ import { MessagesModule } from 'primeng/messages';
 import { FormComponent } from './form/form.component';
 import { MenuModule } from 'primeng/menu';
 import { AvatarModule } from 'primeng/avatar';
-import { AvatarGroupModule } from 'primeng/avatargroup';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
-import { ContactComponent } from './contact/contact.component';
-import { HomeComponent } from './home/home.component';
 import { MenubarModule } from 'primeng/menubar';
 @NgModule({
   declarations: [
     AppComponent,
     FormComponent,
+    FormFirstComponent,
     NavBarComponent,
     ContactComponent,
     HomeComponent
@@ -49,7 +51,7 @@ import { MenubarModule } from 'primeng/menubar';
     AvatarGroupModule,
     AvatarModule,
     MenubarModule
-    
+
 
   ],
   providers: [
