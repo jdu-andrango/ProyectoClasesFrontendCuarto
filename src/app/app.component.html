@@ -1,3 +1,4 @@
+<!--
 <div class="container">
     <header class="header">
         <h2>formulario basico de registro de Usuario</h2>
@@ -26,13 +27,13 @@
             </div>
             <div class="p-field">
                 <label for="birthdate">cumple</label>
-                <!-- <p-calendar id="birthdate" [(ngModel)]="birthdate" name="birthdate"></p-calendar> -->
+                 <p-calendar id="birthdate" [(ngModel)]="birthdate" name="birthdate"></p-calendar> 
                 <p-calendar [(ngModel)]="birthdate" name="birthdate" [touchUI]="true" [readonlyInput]="true"></p-calendar>
             </div>
         </form>
     </main>
     <footer class="footer">
-        <!-- <button type="submit" [text]="true" [raised]="true"  pButton pRipple (click)="addMessages()" class="p-button success" label="enviar" class="mr-2"></button> -->
+         <button type="submit" [text]="true" [raised]="true"  pButton pRipple (click)="addMessages()" class="p-button success" label="enviar" class="mr-2"></button>
         
         <button type="submit" [text]="true" [raised]="true"  pButton pRipple (click)="mensajeError()" class="p-button success" label="enviar" class="mr-2"></button>
     </footer>
@@ -43,3 +44,10 @@
 
 
 <app-form></app-form>
+
+<app-nav-bar></app-nav-bar>
+<app-home></app-home>
+-->
+<app-nav-bar></app-nav-bar>
+<router-outlet></router-outlet>
+
