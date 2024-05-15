@@ -1,0 +1,47 @@
+<div class="container">
+  <header class="header">
+      <h2>formulario basico de registro de Usuario</h2>
+  </header>
+  <main class="main">
+      <form (ngSubmit)="onSubmit()">
+          <div class="p-field">
+              <label for="name">name</label>
+              <input id="name1" type="text" [(ngModel)]="name" name="name" pInputText >
+          </div>
+          <div class="p-field">
+              <label for="userName">user</label>
+              <input id="userName" type="text" [(ngModel)]="userName" name="userName" pInputText >
+          </div>
+          <div class="p-field">
+              <label for="email">email</label>
+              <input id="email" type="email" [(ngModel)]="email" name="email" pInputText >
+          </div>
+          <div class="p-field">
+              <label for="password">password</label>
+              <input id="password2" type="password" [(ngModel)]="password" name="password" pInputText >
+          </div>
+          <div class="p-field">
+              <label for="telefono">telefono</label>
+              <input id="telefono"  type="telefono" [(ngModel)]="telefono" name="telefono" pInputText >
+          </div>
+          <div class="p-field">
+              <label for="birthdate">cumple</label>
+              <!-- <p-calendar id="birthdate" [(ngModel)]="birthdate" name="birthdate"></p-calendar> -->
+              <p-calendar [(ngModel)]="birthdate" name="birthdate" [touchUI]="true" [readonlyInput]="true"></p-calendar>
+          </div>
+      </form>
+  </main>
+  <footer class="footer">
+      <!-- <button type="submit" [text]="true" [raised]="true"  pButton pRipple (click)="addMessages()" class="p-button success" label="enviar" class="mr-2"></button> -->
+
+      <button type="submit" [text]="true" [raised]="true"  pButton pRipple (click)="mensajeError()" class="p-button success" label="enviar" class="mr-2"></button>
+  </footer>
+
+  <p-messages></p-messages>
+  <p-messages [(value)]="errormess" [enableService]="false" [closable]="false"  ></p-messages>
+</div>
+
+<br>
+<br>
+<br>
+<br>

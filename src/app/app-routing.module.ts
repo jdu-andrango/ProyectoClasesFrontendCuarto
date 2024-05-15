@@ -7,6 +7,11 @@ import { NoFoundComponent } from './no-found/no-found.component';
 
 const routes: Routes = [
   {
+    path:'',
+    redirectTo:'/home',
+    pathMatch:'full'
+  },
+  {
     path:'home',
     component: HomeComponent
   },
@@ -15,7 +20,7 @@ const routes: Routes = [
     component: ContactComponent
   },
   {
-    path:'navbar',
+    path:'nabvar',
     component: NavBarComponent
   },
   {

@@ -15,28 +15,28 @@ export class NavBarComponent implements OnInit {
   ngOnInit() {
       this.items = [
           {
-              label: 'Router',
-              icon: 'pi pi-palette',
+              label: 'selecciona',
+              icon: 'pi pi-home',
               items: [
                   {
-                      label: 'Installation',
+                      label: 'home',
                       route: '/home'
                   },
                   {
-                      label: 'Configuration',
+                      label: 'contact',
                       route: '/contact'
                   }
               ]
           },
           {
-              label: 'Programmatic',
+              label: 'contacto',
               icon: 'pi pi-link',
               command: () => {
                   this.router.navigate(['/contact']);
               }
           },
           {
-              label: 'External',
+              label: 'link Externos',
               icon: 'pi pi-home',
               items: [
                   {
@@ -49,17 +49,7 @@ export class NavBarComponent implements OnInit {
                   }
               ]
           },
-          {
-            label: 'no funciona',
-            icon: '/noFound',
-            items: [
-                {
-                    label: 'no funciona',
-                    route: '/noFound'
-                },
-                
-            ]
-        }
+          
       ];
   }
 }

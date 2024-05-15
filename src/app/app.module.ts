@@ -18,27 +18,20 @@ import { ButtonModule } from 'primeng/button';
 import { MessageService } from 'primeng/api';
 import { MessagesModule } from 'primeng/messages';
 import { FormComponent } from './form/form.component';
-import { HomeComponent } from './home/home.component';
-import { ContactComponent } from './contact/contact.component';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
-import { MenubarModule } from 'primeng/menubar';
+import { MenuModule } from 'primeng/menu';
 import { AvatarModule } from 'primeng/avatar';
 import { AvatarGroupModule } from 'primeng/avatargroup';
-import { RippleModule } from 'primeng/ripple';
-import { NoFoundComponent } from './no-found/no-found.component';
-
-
-
-
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { ContactComponent } from './contact/contact.component';
+import { HomeComponent } from './home/home.component';
+import { MenubarModule } from 'primeng/menubar';
 @NgModule({
   declarations: [
     AppComponent,
     FormComponent,
-    HomeComponent,
-    ContactComponent,
     NavBarComponent,
-    NoFoundComponent
-    
+    ContactComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -52,9 +45,11 @@ import { NoFoundComponent } from './no-found/no-found.component';
     MessagesModule,
     FormsModule,
     ReactiveFormsModule,
-    MenubarModule,
+    MenuModule,
     AvatarGroupModule,
-    AvatarModule
+    AvatarModule,
+    MenubarModule
+    
 
   ],
   providers: [
