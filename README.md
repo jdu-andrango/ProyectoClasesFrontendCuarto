@@ -142,7 +142,23 @@ ahora solo procedemos a utilizar el Button de primeng con la sintaxis especial d
 <p-button label="Submit"></p-button>
 ```
 
-ProyectoClasesFrontendCuarto
+# servicios 
+los servicios son utilizados para compartir **Datos** 
+
+# Enrutamiento utilizando anglar dex
+esto nos ayuda a reorganizar los modulos y rutas de nuestro proyecto
+## enrutamientos con rutas hijas 
+
+### Estrategias para compartir datos 
+Con el uso de metodos HTTP para peticiones del servidor o del backend de nuestra aplicacion.
+
+
+
+
+
+
+
+# ProyectoClasesFrontendCuarto
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.6.
 
