@@ -10,4 +10,19 @@
     </button>
   </div>
 </div>
+<div class="p-container">
+  <h2>lista de cosas </h2>
 
+  <div *ngFor="let cosita of cosas" class="">
+    <h1>{{cosita.nombre}}</h1>
+    <h1>{{cosita.curso}}</h1>
+    <button (click)="addCosa(cosas)" pButton pRipple >
+      agregar al carrito
+    </button>
+  </div>
+</div>
+
+
+<div class="" *ngFor="let product of cartItems">
+<button (click)="onClicAdd(product)">agregar</button>
+</div>

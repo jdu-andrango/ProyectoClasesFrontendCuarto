@@ -14,8 +14,6 @@ export class StoreComponent implements OnInit {
   }
 
   ngOnInit():void {
-
-
     this.items = this.Cartservices.getItem()
   }
 }
