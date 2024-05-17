@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { MenuItem } from 'primeng/api/menuitem';
-import { CartService } from '../cart.service';
+// import { CartService } from '../cart.service';
+import { PrimeIcons } from 'primeng/api';
 
 @Component({
   selector: 'app-nav-bar',
@@ -10,7 +11,7 @@ import { CartService } from '../cart.service';
 })
 export class NavBarComponent implements OnInit {
   items: MenuItem[] | undefined;
-  
+
 
   constructor(private router: Router) {
 
@@ -18,7 +19,7 @@ export class NavBarComponent implements OnInit {
 
   ngOnInit():void {
 
-    
+
 
 
 
@@ -40,7 +41,8 @@ export class NavBarComponent implements OnInit {
           },
           {
             label: 'Contactos',
-            icon: 'pi pi-contactos',
+            icon: 'pi pi-address-book',
+
             route: '/contact'
             // items: [
             //     {
@@ -55,7 +57,7 @@ export class NavBarComponent implements OnInit {
         },
         {
           label: 'formulario Reactivo Usuarioss',
-          icon: 'pi pi-form',
+          icon: 'pi pi-clipboard',
           route:'/formReact'
           // items: [
           //     {
@@ -70,7 +72,7 @@ export class NavBarComponent implements OnInit {
       },
       {
         label: 'formulario',
-        icon: 'pi pi-formulario',
+        icon: 'pi pi-clipboard',
         route:'/form'
         // items: [
         //     {
@@ -83,11 +85,11 @@ export class NavBarComponent implements OnInit {
         //     }
         // ]
     },
-    
+
       {
-        label: 'formulario',
-        icon: 'pi pi-formulario',
-        route:'/form'
+        label: 'Productos',
+        icon:'pi pi-cart-minus ',
+        route:'/product'
         // items: [
         //     {
         //         label: 'home',

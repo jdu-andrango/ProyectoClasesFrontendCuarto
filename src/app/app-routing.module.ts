@@ -6,6 +6,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { HomeComponent } from './home/home.component';
 import { NoFoundComponent } from './no-found/no-found.component';
 import { FormFirstComponent } from './form-first/form-first.component';
+import { ProductListComponent } from './product-list/product-list.component';
 
 const routes: Routes = [
   {
@@ -32,6 +33,10 @@ const routes: Routes = [
   {
     path:'formReact',
     component: FormComponent
+  },
+  {
+    path:'product',
+    component: ProductListComponent
   },
   {
     path:'**',
