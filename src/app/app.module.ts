@@ -27,6 +27,7 @@ import { MenuModule } from 'primeng/menu';
 import { AvatarModule } from 'primeng/avatar';
 import { MenubarModule } from 'primeng/menubar';
 import { ProductListComponent } from './product-list/product-list.component';
+import { StoreComponent } from './store/store.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +36,8 @@ import { ProductListComponent } from './product-list/product-list.component';
     NavBarComponent,
     ContactComponent,
     HomeComponent,
-    ProductListComponent
+    ProductListComponent,
+    StoreComponent
   ],
   imports: [
     BrowserModule,

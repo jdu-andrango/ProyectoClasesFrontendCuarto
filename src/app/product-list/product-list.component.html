@@ -1,13 +1,13 @@
 
 <div class="p-container">
-  <h2>lista de productos agregados</h2>
+  <h2>lista de productos </h2>
 
   <div *ngFor="let product of products" class="">
     <h1>{{product.name}}</h1>
+    <img [src]="product.imagen" alt="">
     <button (click)="addToCart(product)" pButton pRipple >
-      agregar
+      agregar al carrito
     </button>
   </div>
-
 </div>
 

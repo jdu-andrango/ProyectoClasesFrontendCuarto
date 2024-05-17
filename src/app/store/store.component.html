@@ -1,0 +1,16 @@
+<h1>lista de productos Agregados</h1>
+<div class="p-container">
+
+  <div class="text-white" *ngFor="let item of items"  >
+
+    <h2>
+
+      {{item.name}}
+    </h2>
+    <img [src]="item.imagen" alt="">
+  </div>
+
+</div>
+
+
+

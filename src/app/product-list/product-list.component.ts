@@ -8,8 +8,16 @@ import { CartService } from '../cart.service';
 })
 export class ProductListComponent {
 products: any []=[
-  {name:'coca cola',precio:45},
-  {name:'pepsi',precio:60}
+  {
+    name:'coca cola',
+    precio:45,
+    imagen:'../../assets/images/coca-cola.webp'
+  },
+  {
+    name:'pepsi',
+    precio:60,
+    imagen:'../../assets/images/pepsi.png'
+  }
 ];
 
 constructor(private readonly CartService:CartService){

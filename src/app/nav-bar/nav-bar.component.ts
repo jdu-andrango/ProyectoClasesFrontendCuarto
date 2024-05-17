@@ -85,10 +85,9 @@ export class NavBarComponent implements OnInit {
         //     }
         // ]
     },
-
       {
-        label: 'Productos',
-        icon:'pi pi-cart-minus ',
+        label: 'Lista de productos',
+        icon:' pi pi-prime ',
         route:'/product'
         // items: [
         //     {
@@ -101,6 +100,21 @@ export class NavBarComponent implements OnInit {
         //     }
         // ]
     },
+    {
+      label: 'carrito',
+      icon: 'pi pi-cart-minus',
+      route:'/store'
+      // items: [
+      //     {
+      //         label: 'home',
+      //         route: '/home'
+      //     },
+      //     {
+      //         label: 'contact',
+      //         route: '/contact'
+      //     }
+      // ]
+  },
 
       ];
   }
