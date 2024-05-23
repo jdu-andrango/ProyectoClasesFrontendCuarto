@@ -28,6 +28,7 @@ import { AvatarModule } from 'primeng/avatar';
 import { MenubarModule } from 'primeng/menubar';
 import { ProductListComponent } from './product-list/product-list.component';
 import { StoreComponent } from './store/store.component';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -54,7 +55,8 @@ import { StoreComponent } from './store/store.component';
     MenuModule,
     AvatarGroupModule,
     AvatarModule,
-    MenubarModule
+    MenubarModule,
+    HttpClientModule
 
 
   ],

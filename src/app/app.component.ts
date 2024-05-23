@@ -8,9 +8,18 @@ import { EjemploService } from './ejemplo.service';
   styleUrl: './app.component.css',
   providers: [MessageService]
 })
-export class AppComponent  {
-
+export class AppComponent implements OnInit {
+  users: any[] = [];
    constructor( private readonly EjemploService: EjemploService){
     EjemploService.imprimir();
    }
+   ngOnInit(){
+    this.ConexionService.getUsers().subscribe(data => {
+      this.users = data;
+    this.EjemploService.getUsers().subscribe(data => {
+      this.users = data;
+    })}
+
+   
+
 }

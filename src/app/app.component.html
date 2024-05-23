@@ -1,3 +1,14 @@
 
 <app-nav-bar></app-nav-bar>
 <router-outlet></router-outlet>
+<div *ngIf="users.length > 0">
+    <ul>
+      <li *ngFor="let user of users">
+        {{ user.name }} - {{ user.email }}
+      </li>
+    </ul>
+  </div>
+  <div *ngIf="users.length === 0">
+    No users found.
+  </div>
+  

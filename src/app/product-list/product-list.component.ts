@@ -41,13 +41,7 @@ ngOnInit():void{
   this.CartService.getItems().subscribe(items => this.cartItems = items)
 }
 
-onClicAdd(item:any):void{
-  this.CartService.addItem(item).subscribe(items => this.cartItems = items)
-}
 
-onClickDelete(itemId: number):void{
-  this.CartService.removeItem(itemId).subscribe(()=> console.log('removido'))
-}
 
 onClickClear():void{
   this.CartService.clearCart().subscribe(()=> console.log(' removida toda la lista'))

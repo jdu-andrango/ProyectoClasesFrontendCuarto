@@ -5,21 +5,11 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class EjemploService {
-
+export class ConexionService {
   private apiUrl = 'http://localhost:3000';
-
-  imprimir(){
-    
-    return console.log('servcicio funcionando')
-  }
-  constructor(private http: HttpClient) { 
-    console.log('Servicio Funcionando')
-  }
-
+  constructor(private http: HttpClient) { }
   getUsers(): Observable<any> {
     return this.http.get(`${this.apiUrl}/users`);
   }
-
 
 }
