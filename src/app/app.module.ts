@@ -29,6 +29,7 @@ import { MenubarModule } from 'primeng/menubar';
 import { ProductListComponent } from './product-list/product-list.component';
 import { StoreComponent } from './store/store.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ProductsComponent } from './products/products.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +39,8 @@ import { HttpClientModule } from '@angular/common/http';
     ContactComponent,
     HomeComponent,
     ProductListComponent,
-    StoreComponent
+    StoreComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,
