@@ -1,1 +1,20 @@
-<p>products works!</p>
+<ul *ngFor="let producto of productos">
+    <li>{{producto.id}}</li>
+    <li>{{producto.name}}</li>
+    <li>{{producto.description}}</li>
+</ul>
+
+<!-- product.component.html -->
+
+<ul>
+    <li *ngFor="let product of productos">
+      {{ product.name }} - {{ product.description }}
+    </li>
+  </ul>
+
+<form action="">
+    <label for="">Prueba</label>
+    <input  type="text">
+    <button (click)="enviarDatos()">enviar</button>
+</form>
+  

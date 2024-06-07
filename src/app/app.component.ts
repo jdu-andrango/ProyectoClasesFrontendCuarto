@@ -10,16 +10,17 @@ import { EjemploService } from './ejemplo.service';
 })
 export class AppComponent implements OnInit {
   users: any[] = [];
+  ConexionService: any;
    constructor( private readonly EjemploService: EjemploService){
     EjemploService.imprimir();
    }
    ngOnInit(){
-    this.ConexionService.getUsers().subscribe(data => {
-      this.users = data;
+    this.ConexionService.getUsers().subscribe((data: any[]) => {
+      this.users = data;})
     this.EjemploService.getUsers().subscribe(data => {
       this.users = data;
     })}
 
    
-
+   
 }

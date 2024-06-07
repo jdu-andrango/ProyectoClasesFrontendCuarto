@@ -29,7 +29,7 @@ import { MenubarModule } from 'primeng/menubar';
 import { ProductListComponent } from './product-list/product-list.component';
 import { StoreComponent } from './store/store.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ProductsComponent } from './products/products.component';
+import { ProductsModule } from './products/products.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,8 +39,7 @@ import { ProductsComponent } from './products/products.component';
     ContactComponent,
     HomeComponent,
     ProductListComponent,
-    StoreComponent,
-    ProductsComponent
+    StoreComponent
   ],
   imports: [
     BrowserModule,
@@ -58,7 +57,8 @@ import { ProductsComponent } from './products/products.component';
     AvatarGroupModule,
     AvatarModule,
     MenubarModule,
-    HttpClientModule
+    HttpClientModule,
+    ProductsModule
 
 
   ],
