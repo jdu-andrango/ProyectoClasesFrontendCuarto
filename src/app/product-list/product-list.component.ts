@@ -8,18 +8,18 @@ import { CartService } from '../cart.service';
 })
 export class ProductListComponent {
   cartItems : any []=[];
-// products: any []=[
-//   {
-//     name:'coca cola',
-//     precio:45,
-//     imagen:'../../assets/images/coca-cola.webp'
-//   },
-//   {
-//     name:'pepsi',
-//     precio:60,
-//     imagen:'../../assets/images/pepsi.png'
-//   }
-// ];
+products: any []=[
+  {
+    name:'coca cola',
+    precio:45,
+    imagen:'../../assets/images/coca-cola.webp'
+  },
+  {
+    name:'pepsi',
+    precio:60,
+    imagen:'../../assets/images/pepsi.png'
+  }
+];
 
 // cosas:any[]=[
 //   {
@@ -38,7 +38,7 @@ constructor(private readonly CartService:CartService){
 }
 
 ngOnInit():void{
-  this.CartService.getItems().subscribe(items => this.cartItems = items)
+  // this.CartService.getItems().subscribe(items => this.cartItems = items)
 }
 
 

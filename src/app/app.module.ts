@@ -30,6 +30,8 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { StoreComponent } from './store/store.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductsModule } from './products/products.module';
+import { LlamadaModule } from './llamada/llamada.module';
+import { CategoriasModule } from './categorias/categorias.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,7 +60,9 @@ import { ProductsModule } from './products/products.module';
     AvatarModule,
     MenubarModule,
     HttpClientModule,
-    ProductsModule
+    ProductsModule,
+    LlamadaModule,
+    CategoriasModule
 
 
   ],

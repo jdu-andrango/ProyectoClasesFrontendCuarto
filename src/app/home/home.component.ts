@@ -14,8 +14,8 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit():void {
-  
-    
-    this.items = this.Cartservices.getItem()
+
+
+    // this.items = this.Cartservices.getItem()
   }
 }
